@@ -27,12 +27,20 @@ let mycss = {
 
 
 const App = () => {
+
+    // function
+const printAlert =(message) =>{
+    alert(message)
+}
+
 return (
     <>  App
 
         {/* passing props */}
         <Heading content="Top Content" number={0} array={['','.','..']} object={{name:"panos",skill:"coding"}}/>
-        <Heading content="My books" number={2}/>
+        <Heading content="My books" number={2} 
+        // without () so it won't trigger
+        printAlert={printAlert}/>
 
     </>
 )
@@ -43,8 +51,13 @@ return (
 const Heading = (props) => {
     console.log(props)
     return (
-        // reading props
-    <h1>Header - {props.content} - {props.number==0 ? "No number was inputted": props.number}</h1>
+            // reading props
+        <div>
+            <h1>Header - {props.content} - {props.number==0 ? "No number was inputted": props.number}</h1>
+            
+            {/* Button with my function */}
+            <button onClick={props.printAlert==undefined ? null :props.printAlert.bind(null,"Hi")}>Press</button>
+        </div>
     )
 }
 
