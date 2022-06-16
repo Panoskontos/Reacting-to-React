@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 // Tecnhically Babel creates the html elements while using 
 // as little as possible syntax
 
+
+// Why jsx is the best!
 // vars to change html
 let name = "Panos";
 let lname = "Kontos"
@@ -25,39 +27,27 @@ let mycss = {
 
 
 const App = () => {
+return (
+    <>  App
 
-    // simple function
-    let showAccount = () => {
-        return (
-            <div style={
-                    // Writing css in React
-                {background: 'blue',
-                 color: 'white',
-                width: '400px',
-                height: `${height}px`    
-            }
-                }>
-                Account Component
-            </div>
-        )
-    }
+        {/* passing props */}
+        <Heading content="Top Content" number={0} array={['','.','..']} object={{name:"panos",skill:"coding"}}/>
+        <Heading content="My books" number={2}/>
 
+    </>
+)
+}
+
+// const component
+// add them as a parameter
+const Heading = (props) => {
+    console.log(props)
     return (
-    <div>
-
-    <h2>Welcome {name + ' ' +lname} {2022-age}</h2>
-    <br />
-    <h2 style={mycss.box}
-    >What is your next move</h2>
-    <br />
-    
-    {/* trigger function */}
-    {showAccount()}
-
-
-    </div>
+        // reading props
+    <h1>Header - {props.content} - {props.number==0 ? "No number was inputted": props.number}</h1>
     )
 }
+
 
 // Where to render
 ReactDOM.render(<App/>, document.getElementById('root'))
