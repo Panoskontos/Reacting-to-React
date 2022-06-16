@@ -6,17 +6,28 @@ import ReactDOM from 'react-dom';
 // Tecnhically Babel creates the html elements while using 
 // as little as possible syntax
 
-// vars
+// vars to change html
 let name = "Panos";
 let lname = "Kontos"
 let age = 1996;
+
+// you can input vars to change css wow 
+let height = 200;
+
 
 const App = () => {
 
     // simple function
     let showAccount = () => {
         return (
-            <div>
+            <div style={
+                    // Writing css in React
+                {background: 'blue',
+                 color: 'white',
+                width: '400px',
+                height: `${height}px`    
+            }
+                }>
                 Account Component
             </div>
         )
