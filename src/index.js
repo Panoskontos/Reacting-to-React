@@ -12,7 +12,30 @@ let lname = "Kontos"
 let age = 1996;
 
 const App = () => {
-    return (<h2>Welcome {name + ' ' +lname} {2022-age}</h2>)
+
+    // simple function
+    let showAccount = () => {
+        return (
+            <div>
+                Account Component
+            </div>
+        )
+    }
+
+    return (
+    <div>
+
+    <h2>Welcome {name + ' ' +lname} {2022-age}</h2>
+    <br />
+    <h2>What is your next move</h2>
+    <br />
+    
+    {/* trigger function */}
+    {showAccount()}
+
+
+    </div>
+    )
 }
 
 // Where to render
