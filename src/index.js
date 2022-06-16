@@ -13,6 +13,15 @@ let age = 1996;
 
 // you can input vars to change css wow 
 let height = 200;
+let mycss = {
+    box:{
+        background:"gold",
+        color:"white",
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+    }
+}
 
 
 const App = () => {
@@ -38,7 +47,8 @@ const App = () => {
 
     <h2>Welcome {name + ' ' +lname} {2022-age}</h2>
     <br />
-    <h2>What is your next move</h2>
+    <h2 style={mycss.box}
+    >What is your next move</h2>
     <br />
     
     {/* trigger function */}
