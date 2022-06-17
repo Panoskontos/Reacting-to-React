@@ -41,8 +41,12 @@ return (
         <Heading content="My books" number={2} 
         // without () so it won't trigger
         printAlert={printAlert}/>
+
         <br />
 
+        <AddButton text="Add" color="green"/>
+        <AddButton text="+" color="aqua"/>
+        <br />
 
         {/* children help when you want to pass diff html in the same comp*/}
         <Body background="black" width="300px">
@@ -73,6 +77,8 @@ return (
 
         </Body> 
 
+
+        
     </>
 )
 }
@@ -110,6 +116,27 @@ const Body = (props) =>{
         </div>
     )
 }
+
+
+const AddButton = (props) => {
+    return (
+        <div>
+            <button style={
+                {
+                background:props.color,
+                color:'white',
+                border:'none',
+                width:'70px',
+                height:'30px',
+                borderRadius:'10px'
+            }
+            }
+            >{props.text}</button>
+        </div>
+    )
+}
+
+
 
 
 // Where to render
