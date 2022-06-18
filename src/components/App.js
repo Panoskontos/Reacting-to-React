@@ -6,6 +6,7 @@ import Header from './Header';
 import Card from './Card';
 import Button from './Button'
 import Counter from "./counter/Counter";
+import Form from "./form/Form"
 
 let data = 
     [
@@ -72,8 +73,9 @@ return (
     <br />
     <br />
     <br />
-    <Counter/>
+    {/* <Counter/> */}
     <br />
+    <Form/>
     <br />
     <br />
     <br />
