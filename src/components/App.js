@@ -5,7 +5,7 @@ import Logo from './Logo';
 import Header from './Header';
 import Card from './Card';
 import Button from './Button'
-import Counter from "./Counter";
+import Counter from "./counter/Counter";
 
 let data = 
     [
