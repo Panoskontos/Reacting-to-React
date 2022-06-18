@@ -12,9 +12,10 @@ return (
         <Number/>
        
         <div className="counter__buttons">
-       
-            <Button class="counter__plus" text="+"/>
-            <Button class="counter__minus" text="-"/>
+
+            <Button class="counter__plus">+</Button>
+            <Button class="counter__minus">-</Button>
+
        
         </div>
 
