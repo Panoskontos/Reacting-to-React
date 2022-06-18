@@ -4,7 +4,7 @@ import React from "react";
 import Logo from './Logo';
 import Header from './Header';
 import Card from './Card';
-
+import Button from './Button'
 
 let data = 
     [
@@ -30,15 +30,16 @@ let data =
         joinedYear: 2013,}
     ]
 
-export default function() {
+const App = () => {
 
-    // short way
+    // short way | MOST USED
     const ShortWayPrintCards =() => {
         // with map
     return data.map((i) => {
-        return <Card UserData={i}/>
+        return <Card UserData={i} key={i.fullName}/>
     })
     }
+
 
     // long way to loop cards
     const printCards=()=>{
@@ -48,7 +49,7 @@ export default function() {
         // push components
         for (let i=0;i<data.length;i++){
             console.log(i)
-            cards.push(<Card UserData={data[i]}/>)
+            cards.push(<Card UserData={data[i]} key={i}/>)
         }
         // return array
         return cards
@@ -59,13 +60,36 @@ return (
     <>  
     <Logo children="Hello"/>
     <Header content="Panos" number={10}/>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <Button children="Press"/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <Card image1="" UserData = {data} />
-    
+    <div style={{display:"flex"}}>
     {/* long way function */}
     {printCards()}
+    </div>
 
     {/* short way */}
     {ShortWayPrintCards()}
     </>
 )
 }
+
+export default App

@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function(props){
+const Header = (props) => {
     return (
        // reading props
        <div>
@@ -11,3 +11,5 @@ export default function(props){
 
     )
 }
+
+export default Header

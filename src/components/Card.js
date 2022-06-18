@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export default function(props){
+const Card = (props) => {
     return (
         
 <div className="ui special cards">
@@ -35,3 +35,5 @@ export default function(props){
     )
       
 }
+
+export default Card
