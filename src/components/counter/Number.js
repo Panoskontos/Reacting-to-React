@@ -2,10 +2,10 @@ import React from "react";
 
 // Using Hooks
 
-const Number = () => {
+const Number = (props) => {
 return (
         <div className="counter__number">
-            0
+            {props.digit}
         </div>      
 )
 }

@@ -2,8 +2,14 @@ import React from "react";
 
 const Button = (props) => {
 
+    // using hook to change state
     const clicked = () =>{
         console.log("God damn")
+        if (props.value=="plus"){
+            props.setPoints(props.points+1)
+        } else {
+            props.setPoints(props.points-1)
+        }
     }
 
 
