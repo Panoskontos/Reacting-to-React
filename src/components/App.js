@@ -32,15 +32,25 @@ let data =
 
 export default function() {
 
+    // short way
+    const ShortWayPrintCards =() => {
+        // with map
+    return data.map((i) => {
+        return <Card UserData={i}/>
+    })
+    }
 
     // long way to loop cards
     const printCards=()=>{
+        // create empty array
         const cards = []
+
+        // push components
         for (let i=0;i<data.length;i++){
             console.log(i)
             cards.push(<Card UserData={data[i]}/>)
         }
-
+        // return array
         return cards
     }
 
@@ -51,8 +61,11 @@ return (
     <Header content="Panos" number={10}/>
     <Card image1="" UserData = {data} />
     
-    {/* loop function */}
+    {/* long way function */}
     {printCards()}
+
+    {/* short way */}
+    {ShortWayPrintCards()}
     </>
 )
 }
