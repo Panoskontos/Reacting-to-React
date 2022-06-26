@@ -5,7 +5,9 @@ import A from "../context/A";
 const App =()=>{
     return(
         <div>
+            {/* setting global memory */}
             <GlobalState>
+                {/* add App as a consumer */}
                 <StateContext.Consumer>
                     {
                     context => {
@@ -13,9 +15,7 @@ const App =()=>{
                             <>
                             <h1>Name: {context.name}</h1>
                             
-                            <A>
-
-                            </A>
+                            <A/> 
 
                             </>
                         )}

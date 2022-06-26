@@ -1,4 +1,7 @@
 import { Component } from "react";
+import {StateContext} from "../context/ClassProvider"
+import B from "./B";
+
 
 class A extends Component {
     constructor(props){
@@ -7,17 +10,27 @@ class A extends Component {
     state = {  }
     render() { 
         return ( 
-            <div >
-                <div style={
+            <div style={
                 {
-                    background:'blue',
-                    width:'300px',
-                    color:'white',
-                }
-                }>
+                background:'grey',
+                width:'200px',
+                height:'300px',
+                color:'white',
+            }
+            }>
+                {/* Adding A as a consumer */}
+                <StateContext.Consumer>
+                {(context)=>(
+                    <div>
 
-                Hello {this.props.children}
-                </div>
+                    <h2>Hello: {context.name}</h2>
+                    
+                    <B/>
+                    </div>
+                    
+                    )}
+            
+                </StateContext.Consumer>
             </div>
          );
     }
