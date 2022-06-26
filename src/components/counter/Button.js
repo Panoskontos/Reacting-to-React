@@ -7,7 +7,7 @@ const Button = (props) => {
     alert("You won")
     props.setGoal(props.points*2)
 }
-    // using hook to change state
+    //  using hook to change state
     const clicked = () =>{
         console.log("God damn")
         if (props.value=="plus"){
