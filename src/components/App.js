@@ -1,11 +1,27 @@
 import React, {Component} from "react";
-import { GlobalState } from "../ClassProvider";
-
+import { GlobalState, StateContext } from "../context/ClassProvider";
+import A from "../context/A";
 
 const App =()=>{
     return(
         <div>
-            Hello
+            <GlobalState>
+                <StateContext.Consumer>
+                    {
+                    context => {
+                        return(
+                            <>
+                            <h1>Name: {context.name}</h1>
+                            
+                            <A>
+
+                            </A>
+
+                            </>
+                        )}
+                    }
+                </StateContext.Consumer>
+            </GlobalState>
         </div>
     )
 }
