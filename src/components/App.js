@@ -13,9 +13,8 @@ const App =()=>{
                     context => {
                         return(
                             <>
-                            <h1>Name: {context.name}</h1>
-                            
-                            <A/> 
+                            {/* <h1>Name: {context.name}</h1>
+                            <A/>  */}
 
                             </>
                         )}
